@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Pressable, Text, View, TextInput, StyleSheet } from "react-native";
+import NumberFormat from "react-number-format"
 
 export default function Index() {
 
@@ -33,7 +34,6 @@ export default function Index() {
         style={Styles.CalculatorInput}
         value={dailyHours.toString()}
         placeholder="Your daily paid hours" 
-        
         onChangeText={(text) => setDailyHours(parseInt(text))}/>
         
         <Text> X </Text>
@@ -63,7 +63,7 @@ const Styles = StyleSheet.create({
   },
   PressableText: {
     textAlign: 'center',
-    fontSize: 24
+    fontSize: 34
   },
   Pressable: {
     borderWidth: 1,
@@ -77,7 +77,9 @@ const Styles = StyleSheet.create({
   Calculator: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: '35%'
+    marginLeft: '34%',
+    paddingTop: 10,
+    paddingBottom: 10
   },
   CalculatorInput: {
     width: '20%',
@@ -87,11 +89,11 @@ const Styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     borderRadius: 20,
-    marginBottom: 40
+    marginBottom: 40,
+
   },
   Calculate: {
     fontSize: 17,
     fontWeight: 'bold',
-
   }
 })
