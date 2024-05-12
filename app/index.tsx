@@ -89,7 +89,7 @@ const Styles = StyleSheet.create({
     color: '#EDED89'
   },
   Pressable: {
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: '#EDED89',
     width: 130,
     height: 130,
@@ -119,7 +119,8 @@ const Styles = StyleSheet.create({
     fontSize: 24
   },
   CalculatorPress: {
-    borderWidth: 1,
+    borderWidth: 9,
+    borderBlockColor: 'green',
     padding: 10,
     borderRadius: 20,
     marginBottom: 40,
