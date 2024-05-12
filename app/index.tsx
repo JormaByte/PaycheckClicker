@@ -31,7 +31,7 @@ export default function Index() {
       <Text style={{color: '#EDED89', fontWeight: 'bold', opacity: 0.3}}>- helping you stay motivated :)</Text>
 
         <Text style={Styles.InfoText}> 
-        {infoPressed? '➡️  Hold down on the button below to cash in' : '⚪'}</Text>
+        {infoPressed? '➡️  Hold down on the button below to cash in' : '🟢'}</Text>
 
       <Pressable
         style={({ pressed }) => [
@@ -52,7 +52,7 @@ export default function Index() {
 
       <Text style={Styles.Text}>Calculate your daily rate:</Text>
       <Text style={Styles.InfoText}>
-        {infoPressed ? '➡️  Daily paid hours multiplied by your pay per hour' : '⚪'}</Text>
+        {infoPressed ? '➡️  Daily paid hours multiplied by your pay per hour' : '🟢'}</Text>
 
       <View style={Styles.Calculator}>
         <TextInput 
@@ -66,7 +66,7 @@ export default function Index() {
             }
           }}
         />
-        <Text style={{color: '#EDEDCA', marginLeft: 9, marginRight: 9}}>X</Text>
+        <Text style={{color: '#EDEDCA', marginLeft: 9, marginRight: 9, fontSize: 22}}>X</Text>
         <TextInput 
           style={Styles.CalculatorInput}
           keyboardType="numeric"
@@ -80,7 +80,7 @@ export default function Index() {
         />
       </View>
       <TouchableOpacity style={Styles.CalculatorPress} onPress={Calculate}>
-        <Text style={Styles.Calculate}>Calculate</Text>
+        <Text style={Styles.InfoPressableText}>Calculate</Text>
       </TouchableOpacity>
 
       <Text style={Styles.Text}>TOTAL MONEY MADE SO FAR:</Text>
@@ -140,18 +140,23 @@ const Styles = StyleSheet.create({
     paddingBottom: 10
   },
   CalculatorInput: {
-    width: '15%',
+    width: '20%',
     textAlign: 'center',
     color: '#EDEDCA',
     fontSize: 24
   },
   CalculatorPress: {
-    borderWidth: 9,
-    borderBlockColor: 'green',
-    padding: 10,
+    borderWidth: 2,
+    borderColor: '#000',
+    padding: 26,
     borderRadius: 20,
-    marginBottom: 40,
-    backgroundColor: '#EDED89'
+    margin: 30,
+    backgroundColor: '#00251A',
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 2,}
+   
   },
   Calculate: {
     fontSize: 17,
@@ -168,8 +173,8 @@ const Styles = StyleSheet.create({
     borderColor: '#000',
     padding: 26,
     borderRadius: 20,
-    marginTop: 80,
-    backgroundColor: '#00251A',
+    margin: 30,
+    backgroundColor: '#0a7ea4',
     shadowColor: '#000000',
     shadowOffset: {
       width: 0,
@@ -178,6 +183,6 @@ const Styles = StyleSheet.create({
   },
   InfoPressableText: {
     color: '#EDEDCA',
-    fontSize: 28
+    fontSize: 23
   }
 });
